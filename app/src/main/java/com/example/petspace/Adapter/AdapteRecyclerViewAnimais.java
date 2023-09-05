@@ -54,7 +54,7 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
             holder.mImageViewGener.setImageResource(R.drawable.ic_female);
         }
 
-        holder.mButtonMoreInfo.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), InfoActivity.class);
@@ -95,7 +95,6 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
         private final TextView mTextViewNome;
         private final TextView mTextViewRaca;
         private final TextView mTextViewIdade;
-        private final Button mButtonMoreInfo;
         public Animais mItem;
 
         public ViewHolder(View itemView) {
@@ -107,7 +106,6 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
             mTextViewNome = itemView.findViewById(R.id.nome_card);
             mTextViewRaca = itemView.findViewById(R.id.raca_card);
             mTextViewIdade = itemView.findViewById(R.id.idade_card);
-            mButtonMoreInfo = itemView.findViewById(R.id.moreInfo_card);
 
         }
     }

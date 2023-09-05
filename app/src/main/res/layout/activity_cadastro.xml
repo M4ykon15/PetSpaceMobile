@@ -56,7 +56,6 @@
                 android:hint="Nome"
                 android:textColor="@color/black"
                 android:drawableRight="@drawable/ic_person"
-
                 app:layout_constraintBottom_toTopOf="@id/editText_email"
                 />
 
@@ -108,7 +107,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="6dp"
-                android:inputType="number"
+                android:inputType="phone"
                 app:mask="(__) _____-____"
                 app:maskCharacter="_"
                 app:maskStyle="completable"

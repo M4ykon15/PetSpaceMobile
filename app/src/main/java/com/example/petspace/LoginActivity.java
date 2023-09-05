@@ -5,9 +5,11 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -51,18 +53,34 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void Logar(){
+
         String ed_email = mEditTextEmail.getText().toString();
         String ed_senha =  mEditTextSenha.getText().toString();
 
         Usuario usu = UsuarioDAO.verificaLogin(ed_email, ed_senha);
 
         // 1  retorna que o usuario existe
-        if(usu != null){
+        if (ed_email.equals("") || ed_senha.equals("")) {
+            hideKeyBoard();
+            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+        } else if (usu != null){
+            hideKeyBoard();
             Toast.makeText(LoginActivity.this, "Login realizado com Sucesso", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
         } else {
+            hideKeyBoard();
             Toast.makeText(LoginActivity.this, "Email e/ou Senha invalidos", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void hideKeyBoard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm.isActive()) { // Verifica se o teclado está ativo/aberto
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
         }
     }
 

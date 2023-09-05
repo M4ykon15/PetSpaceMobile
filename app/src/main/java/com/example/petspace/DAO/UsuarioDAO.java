@@ -10,8 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UsuarioDAO {
-    private static final String SQL_VERIFICAR_LOGIN = "SELECT * FROM usuarios WHERE emaill = ? AND senha = ?";
-    private static final String SQL_CADASTRAR_FUN = "INSERT INTO usuarios (nome, emaill, senha, telefone, cpf) VALUES (?, ?, ?, ?, ?)";
+    private static final String SQL_CADASTRAR_FUN = "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES (?, ?, ?, ?, ?)";
 
     public static Usuario verificaLogin(String usuario, String password) {
 
@@ -19,7 +18,7 @@ public class UsuarioDAO {
             Connection conn = Conexao.conectar();
 
             if (conn != null) {
-                String sql = "SELECT * FROM usuarios WHERE emaill = ? AND senha = ?";
+                String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
 
                 PreparedStatement ps = conn.prepareStatement(sql);
                 ps.setString(1, usuario);
@@ -77,7 +76,47 @@ public class UsuarioDAO {
                 e.printStackTrace();
             }
         }
-
         return resposta;
     }
+
+    public static Usuario validarEmailCad(String email) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = Conexao.conectar();
+            if (conn != null) {
+                String sql = "SELECT * FROM usuarios WHERE email = ?";
+                ps = conn.prepareStatement(sql);
+                ps.setString(1, email); // Define o valor do parâmetro
+
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    Usuario valiEmail = new Usuario();
+                    valiEmail.setId(rs.getString(1));
+
+                    return valiEmail;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
 }

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.EditText;
 
 import com.example.petspace.Adapter.AdapteRecyclerViewAnimais;
@@ -29,6 +31,30 @@ public class HomeActivity extends AppCompatActivity {
         adapter = new AdapteRecyclerViewAnimais(AnimaisDAO.pesquisarAnimais());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        mEditTextSeach.addTextChangedListener(new TextWatcher() {
+            private static final long DELAY = 0;
+            private long lastInputTime = 0;
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                adapteFilter = new AdapteRecyclerViewAnimais(AnimaisDAO.pesquisarAnimal(mEditTextSeach.getText().toString()));
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - lastInputTime > DELAY) {
+                    recyclerView.setAdapter(adapteFilter);
+                }
+                lastInputTime = currentTime;
+            }
+        });
 
     }
 }
