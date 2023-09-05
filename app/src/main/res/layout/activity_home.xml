@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <EditText
+        android:id="@+id/edittext_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Pesquisar"
+        android:drawableRight="@drawable/ic_search"
+        android:background="@drawable/bg_edit_seach"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novos Animais Aqui"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Rv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/home_list_card"
+        />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/footer_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="#2E2E2E"-->
+<!--        android:padding="16dp"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/footer_text1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Contato:(11) 95470-5679"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center_horizontal" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Endereço:Rua Onze de outobro - Barueri - SP"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center_horizontal" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="© Todos os direitos reservados - Somos a PetSpace. Desde 2022 no mercado."-->
+<!--            android:textSize="12sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="8dp" />-->
+
+    </LinearLayout>

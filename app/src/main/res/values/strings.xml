@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pet Space</string>
+
+    <string name="app_slogan">A vida é melhor com um amigo</string>
+    <string name="app_welcome">Seja bem-vindo!</string>
+    <string name="text_forgot_password">Esqueceu a senha? Cadastre-se</string>
+    <string name="text_sing_in">Entrar</string>
+    <string name="text_password">Senha</string>
+    <string name="text_email_or_username">Email</string>
+</resources>

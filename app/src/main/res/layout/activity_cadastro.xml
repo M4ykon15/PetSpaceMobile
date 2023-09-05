@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CadastroActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/cachorro"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_login"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_sign_up"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="Cadastrar novo usuário"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/editText_full_name"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/editText_full_name"
+                android:inputType="text"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="6dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@drawable/bg_edit_normal"
+                android:hint="Nome"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_person"
+
+                app:layout_constraintBottom_toTopOf="@id/editText_email"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/editText_email"
+                android:inputType="textEmailAddress"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="6dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@drawable/bg_edit_normal"
+                android:hint="Email"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_email"
+                app:layout_constraintBottom_toTopOf="@id/editText_password_sign_up"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/editText_password_sign_up"
+                android:inputType="textPassword"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="6dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@drawable/bg_edit_normal"
+                android:hint="Senha"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_lock"
+                app:layout_constraintBottom_toTopOf="@id/edittext_telefone"
+                />
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/edittext_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefone"
+                android:drawableRight="@drawable/ic_phone"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                android:inputType="number"
+                app:mask="(__) _____-____"
+                app:maskCharacter="_"
+                app:maskStyle="completable"
+                android:background="@drawable/bg_edit_normal"
+                tools:ignore="MissingClass"
+                app:layout_constraintBottom_toTopOf="@id/editText_cpf_sing_up"/>
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/editText_cpf_sing_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cpf"
+                android:drawableRight="@drawable/ic_cpf"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp"
+                android:inputType="number"
+                app:mask="___.___.___-__"
+                app:maskCharacter="_"
+                app:maskStyle="completable"
+                android:background="@drawable/bg_edit_normal"
+                tools:ignore="MissingClass"
+                app:layout_constraintBottom_toTopOf="@id/button_sign_up"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_sign_up"
+                android:text="Cadastrar"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="12dp"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_button_normal"
+                app:layout_constraintBottom_toTopOf="@id/linear_layout_bottom_signup"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear_layout_bottom_signup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_already"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:text="Você já possui uma conta? Login"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
