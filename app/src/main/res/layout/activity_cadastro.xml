@@ -111,8 +111,8 @@
                 app:mask="(__) _____-____"
                 app:maskCharacter="_"
                 app:maskStyle="completable"
-                android:background="@drawable/bg_edit_normal"
                 tools:ignore="MissingClass"
+                android:background="@drawable/bg_edit_normal"
                 app:layout_constraintBottom_toTopOf="@id/editText_cpf_sing_up"/>
 
             <com.santalu.maskara.widget.MaskEditText

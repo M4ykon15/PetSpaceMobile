@@ -9,6 +9,15 @@ public class Usuario {
     private String Telefone;
     private String Cpf;
 
+    public Usuario(String id, String nome, String email, String senha, String telefone, String cpf) {
+        Id = id;
+        Nome = nome;
+        Email = email;
+        Senha = senha;
+        Telefone = telefone;
+        Cpf = cpf;
+    }
+
     public Usuario(String nome, String email, String senha, String telefone, String cpf) {
         Nome = nome;
         Email = email;

@@ -11,6 +11,8 @@ public class Animais {
     private String Porte;
     private byte[] foto;
 
+
+
     public Animais(String nome, String sexo, String especie, String raca, String idade, String porte, byte[] foto) {
         Nome = nome;
         Sexo = sexo;

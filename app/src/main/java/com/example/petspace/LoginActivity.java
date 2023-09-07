@@ -67,7 +67,9 @@ public class LoginActivity extends AppCompatActivity {
             hideKeyBoard();
             Toast.makeText(LoginActivity.this, "Login realizado com Sucesso", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            intent.putExtra("emailUser" , ed_email);
             startActivity(intent);
+            finish();
         } else {
             hideKeyBoard();
             Toast.makeText(LoginActivity.this, "Email e/ou Senha invalidos", Toast.LENGTH_SHORT).show();
