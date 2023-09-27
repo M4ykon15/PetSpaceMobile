@@ -8,7 +8,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp">
 
         <ImageView
             android:id="@+id/imageViewPet"
@@ -29,190 +30,128 @@
             android:text="Nome:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
         <TextView
             android:id="@+id/textViewNamePet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewName"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Nome:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
         <TextView
             android:id="@+id/textViewSpeciesPet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewSpecies"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="80dp"
             android:text="Espécies:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
         <TextView
             android:id="@+id/textViewSpecies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewName"
+            android:layout_below="@id/textViewNamePet"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Espécie:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             />
 
         <TextView
             android:id="@+id/textViewSex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSpecies"
+            android:layout_below="@id/textViewSpeciesPet"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Sexo:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             />
 
         <TextView
             android:id="@+id/textViewSexPet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewSex"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="135dp"
             android:text="Sexo:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
         <TextView
             android:id="@+id/textViewSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSex"
+            android:layout_below="@id/textViewSexPet"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Porte:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             />
 
         <TextView
             android:id="@+id/textViewPortePet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewSize"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="185dp"
             android:text="Porte:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
         <TextView
             android:id="@+id/textViewBreed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewSize"
+            android:layout_below="@id/textViewPortePet"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Raça:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             />
 
         <TextView
             android:id="@+id/textViewRacaPet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewBreed"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="235dp"
             android:text="Raça:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
         <TextView
             android:id="@+id/textViewAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewBreed"
+            android:layout_below="@id/textViewRacaPet"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp"
             android:text="Idade:"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             />
 
         <TextView
             android:id="@+id/textViewIdadePet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewPet"
+            android:layout_below="@id/textViewAge"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="285dp"
             android:text="Idade:"
             android:textColor="#000000"
             android:textSize="24sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
             />
 
-        <!--    <TextView-->
-        <!--        android:id="@+id/textViewCharacteristics"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_below="@id/textViewAge"-->
-        <!--        android:layout_alignParentStart="true"-->
-        <!--        android:layout_marginTop="30dp"-->
-        <!--        android:text="Características: -"-->
-        <!--        android:textColor="#000000"-->
-        <!--        android:textSize="16sp"-->
-        <!--        android:layout_marginLeft="16dp"-->
-        <!--        android:layout_marginRight="16dp"-->
-        <!--        />-->
-
-        <!--    <TextView-->
-        <!--        android:id="@+id/textViewCaracteristicasPet"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_below="@id/imageViewPet"-->
-        <!--        android:layout_alignParentStart="true"-->
-        <!--        android:layout_marginTop="335dp"-->
-        <!--        android:text="Características: -"-->
-        <!--        android:textColor="#000000"-->
-        <!--        android:textSize="24sp"-->
-        <!--        android:layout_marginLeft="16dp"-->
-        <!--        android:layout_marginRight="8dp"-->
-        <!--        />-->
 
     </RelativeLayout>
 </ScrollView>
