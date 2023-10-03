@@ -3,14 +3,15 @@
 
     <string name="app_slogan">A vida é melhor com um amigo</string>
     <string name="app_welcome">Seja bem-vindo!</string>
-    <string name="text_forgot_password">Esqueceu a senha? Cadastre-se</string>
+    <string name="text_forgot_password">Não possui cadastro ainda? Cadastre-se</string>
     <string name="text_sing_in">Entrar</string>
     <string name="text_password">Senha</string>
     <string name="text_email_or_username">Email</string>
 
-    <string name="sobre_nos">A Pet Space foi concebida com o propósito de proporcionar um lar aos animais de estimação e fazer com que o processo de adoção responsável se torne fácil e intuitivo. No âmbito desse objetivo, desenvolvemos um aplicativo dedicado. Este projeto é resultado da colaboração de uma ONG juntamente de um grupo composto por seis profissionais de desenvolvimento, auxiliando potenciais adotantes sensibilizados pela situação dos animais, muitos dos quais encontram-se abandonados nas ruas. Esse cenário nos motivou a criar um site com o intuito de prestar auxílio a esses animais necessitados.</string>
-    <string name="mission_text">Nosso objetivo central é criar uma plataforma online que facilite a conexão entre animais em busca de um lar e pessoas interessadas em adotar. Queremos melhorar o bem-estar dos animais, tornando a adoção responsável mais simples e acessível. Além disso, nossa missão envolve aumentar a conscientização sobre a importância da adoção e do cuidado adequado aos animais de estimação. Através dessa plataforma, uniremos animais resgatados, abandonados ou em situação vulnerável a famílias dispostas a adotar. Nosso propósito é ser uma plataforma confiável, segura e fácil de usar, promovendo a adoção responsável e cuidando do bem-estar animal. Estamos focados em impactar positivamente a vida dos animais, conectando-os a lares amorosos e proporcionando uma segunda chance para uma vida feliz.</string>
-    <string name="sobre_n_s">Sobre nós</string>
+
+    <string name="sobre_nos">A Pet Space foi concebida com o propósito de proporcionar um lar aos animais de estimação e fazer com que o processo de adoção responsável se torne fácil e intuitivo. Este projeto é resultado da colaboração de seis desenvolvedores para auxiliar uma ONG.</string>
+    <string name="mission_text">Nossa missão envolve aumentar a conscientização sobre a importância da adoção e do cuidado adequado aos animais de estimação.
+com o intuito de criar uma plataforma online que facilite a conexão entre animais em busca de um lar e pessoas interessadas em adotar. Através dessa plataforma, uniremos animais resgatados, abandonados ou em situação vulnerável a famílias dispostas a adotar. Nosso propósito é ser uma plataforma confiável, segura e fácil de usar. Estamos focados em impactar positivamente a vida dos animais proporcionando uma segunda chance para uma vida feliz.</string>    <string name="sobre_n_s">Sobre nós</string>
     <string name="perfil">Perfil</string>
     <string name="mission_title">Nossa missão</string>
     <string name="about_title">Sobre nós</string>

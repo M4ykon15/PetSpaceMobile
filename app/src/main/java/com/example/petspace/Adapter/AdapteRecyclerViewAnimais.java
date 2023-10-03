@@ -48,7 +48,7 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
         holder.mTextViewRaca.setText(mValues.get(position).getRaca());
         holder.mTextViewIdade.setText(mValues.get(position).getIdade());
 
-        if(mValues.get(position).getSexo().equals("F")) {
+        if(mValues.get(position).getSexo().equals("Fêmea")) {
             holder.mImageViewGener.setImageResource(R.drawable.ic_female);
         } else {
             holder.mImageViewGener.setImageResource(R.drawable.ic_male);

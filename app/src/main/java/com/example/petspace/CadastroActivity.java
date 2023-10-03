@@ -90,9 +90,9 @@ public class CadastroActivity extends AppCompatActivity {
             int cadUser = UsuarioDAO.inserirUsuario(usuario);
 
             if(cadUser != 0){
-                Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cadastro efetuado com sucesso", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "fodeu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Erro ao cadastrar usuário", Toast.LENGTH_SHORT).show();
             }
         }
     }

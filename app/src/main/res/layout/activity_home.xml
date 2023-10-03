@@ -132,8 +132,52 @@
                             android:textColor="#000000"
                             android:textSize="20sp"
                             tools:ignore="VisualLintLongText" />
-
                     </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/footer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:background="#2E2E2E"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/footer_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contato:(11) 95470-5679"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Endereço:Rua Onze de outobro - Barueri - SP"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pet Space copyright 2022"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="90dp"
+                            android:text="Todos os direitos reservados somos a petspace desde 2022 no mercado"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
                 </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
