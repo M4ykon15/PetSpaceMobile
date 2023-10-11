@@ -48,6 +48,9 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
         holder.mTextViewRaca.setText(mValues.get(position).getRaca());
         holder.mTextViewIdade.setText(mValues.get(position).getIdade());
 
+        holder.mImageViewAnimais.setImageBitmap(converterByteToBipmap(mValues.get(position).getFoto()));
+
+
         if(mValues.get(position).getSexo().equals("Fêmea")) {
             holder.mImageViewGener.setImageResource(R.drawable.ic_female);
         } else {
@@ -65,10 +68,10 @@ public class AdapteRecyclerViewAnimais extends RecyclerView.Adapter<AdapteRecycl
 
     }
 
-    public static Bitmap converterByteToBipmap(byte[] foto) {
+    public static Bitmap converterByteToBipmap(byte[] imagem) {
         Bitmap bmp = null;
         Bitmap bitmapReduzido = null;
-        byte[] x = foto;
+        byte[] x = imagem;
 
         try {
             bmp = BitmapFactory.decodeByteArray(x, 0, x.length);

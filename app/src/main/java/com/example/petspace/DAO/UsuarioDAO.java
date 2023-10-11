@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO {
-    private static final String SQL_CADASTRAR_FUN = "INSERT INTO usuarios (nome, email, senha, telefone, cpf) VALUES (?, ?, ?, ?, ?)";
+    private static final String SQL_CADASTRAR_FUN = "INSERT INTO usuarios (nome, email, senha, telefone, cpf, nivel_acesso) VALUES (?, ?, ?, ?, ?, 1)";
 
     public static Usuario verificaLogin(String usuario, String password) {
 

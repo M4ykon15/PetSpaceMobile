@@ -32,6 +32,7 @@ public class PerfilActivity extends AppCompatActivity {
     TextView mTextViewNome;
     ImageView mImageViewDelete;
     Button mButtonSave, mButtonEditInfo;
+    private ImageView mIconback;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,15 @@ public class PerfilActivity extends AppCompatActivity {
         mButtonEditInfo = findViewById(R.id.buttonInfo);
         mButtonSave = findViewById(R.id.buttonSave);
         mImageViewDelete = findViewById(R.id.buttonDeleteIcon);
+
+
+
+        mIconback = findViewById(R.id.IconBack);
+        mIconback.setOnClickListener(view -> {
+            startActivity(new Intent(this, HomeActivity.class));
+        });
+
+
 
         mButtonEditInfo.setOnClickListener(new View.OnClickListener() {
             @Override

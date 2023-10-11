@@ -46,10 +46,10 @@ public class InfoActivity extends AppCompatActivity {
             mTextViewNome.setText(animal.getNome());
             mTextViewPorte.setText(animal.getPorte());
             mTextViewIdade.setText(animal.getIdade());
-            if(animal.getSexo().equals("F")){
-                mTextViewSexo.setText("Feminino");
+            if(animal.getSexo().equals("Fêmea")){
+                mTextViewSexo.setText("Fêmea");
             } else {
-                mTextViewSexo.setText("Masculino");
+                mTextViewSexo.setText("Macho");
             }
             mTextViewEspecie.setText(animal.getEspecie());
         } else {

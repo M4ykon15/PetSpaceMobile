@@ -13,6 +13,16 @@
         android:layout_below="@id/logoEdit">
 
         <ImageView
+            android:id="@+id/IconBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
             android:id="@+id/logoEdit"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -37,7 +47,7 @@
             android:id="@+id/buttonInfo"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="?attr/colorPrimary"
+            android:background="@color/verde"
             android:hint="Editar Informações"
             android:textColorHint="@color/white"
             android:textStyle="bold"
