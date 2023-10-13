@@ -17,7 +17,7 @@ public class About extends Activity {
         mIconback = findViewById(R.id.IconBack);
 
         mIconback.setOnClickListener(view -> {
-            startActivity(new Intent(this, HomeActivity.class));
+            onBackPressed();
         });
     }
 }

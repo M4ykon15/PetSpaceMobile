@@ -1,6 +1,7 @@
 package com.example.petspace;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -76,20 +77,29 @@ public class HomeActivity extends AppCompatActivity {
 
                 switch (menuItem.getItemId()) {
                     case R.id.action_phone:
+                        String phoneNumber = "(11) 95470-5679"; // Substitua com o número de telefone desejado
+                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
 
-                        Toast.makeText(HomeActivity.this, "Telefone selecionado", Toast.LENGTH_SHORT).show();
+                        try {
+                            startActivity(intent);
+                        } catch (SecurityException e) {
+                            Toast.makeText(HomeActivity.this, "Erro ao discar para o número de telefone.", Toast.LENGTH_SHORT).show();
+                        }
+
                         return true;
+
 
 
                     case R.id.action_logout:
-
                         Toast.makeText(HomeActivity.this, "Logout selecionado", Toast.LENGTH_SHORT).show();
                         openLoginActivity();
                         return true;
-                    case R.id.action_profile:
 
-                        openPerfilActivity();
+                        case R.id.action_profile:
+                            Toast.makeText(HomeActivity.this, "Perfil selecionado", Toast.LENGTH_SHORT).show();
+                            openPerfilActivity();
                         return true;
+
                     case R.id.action_about_us:
                         startActivity(new Intent(HomeActivity.this, About.class));
                         return true;
@@ -106,6 +116,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(HomeActivity.this, PerfilActivity.class);
         intent.putExtra("emailUser", getIntent().getExtras().getString("emailUser"));
         startActivity(intent);
+
     }
     private void openLoginActivity() {
         Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
