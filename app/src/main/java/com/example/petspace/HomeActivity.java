@@ -1,6 +1,7 @@
 package com.example.petspace;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -76,9 +77,17 @@ public class HomeActivity extends AppCompatActivity {
 
                 switch (menuItem.getItemId()) {
                     case R.id.action_phone:
+                        String phoneNumber = "11954705679"; // Substitua com o número de telefone desejado
+                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
 
-                        Toast.makeText(HomeActivity.this, "Telefone selecionado", Toast.LENGTH_SHORT).show();
+                        try {
+                            startActivity(intent);
+                        } catch (SecurityException e) {
+                            Toast.makeText(HomeActivity.this, "Erro ao discar para o número de telefone.", Toast.LENGTH_SHORT).show();
+                        }
+
                         return true;
+
 
 
                     case R.id.action_logout:
