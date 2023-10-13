@@ -32,7 +32,7 @@ public class InfoActivity extends AppCompatActivity {
         mIconback = findViewById(R.id.IconBack);
 
         mIconback.setOnClickListener(view -> {
-            onBackPressed();
+            startActivity(new Intent(this, HomeActivity.class));
         });
 
         mTextViewNome = findViewById(R.id.textViewNamePet);

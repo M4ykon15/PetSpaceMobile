@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deseja excluir seu usuário? Essa ação não possui volta"
+        android:text="Deseja deletar seu Usuario? essa ação não tem volta"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:textStyle="bold"
