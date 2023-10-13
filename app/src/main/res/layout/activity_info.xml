@@ -12,13 +12,23 @@
         android:paddingLeft="30dp">
 
         <ImageView
+        android:id="@+id/IconBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_back"/>
+
+        <ImageView
             android:id="@+id/imageViewPet"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="75dp"
+            android:background="@drawable/rounded_background" />
+
 
         <TextView
             android:id="@+id/textViewName"
