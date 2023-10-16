@@ -96,7 +96,7 @@ public class HomeActivity extends AppCompatActivity {
                         openLoginActivity();
                         return true;
                     case R.id.action_profile:
-
+                        Toast.makeText(HomeActivity.this, "Perfil selecionado", Toast.LENGTH_SHORT).show();
                         openPerfilActivity();
                         return true;
                     case R.id.action_about_us:
